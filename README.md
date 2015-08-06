@@ -1,2 +1,3 @@
 # Monnkobita
-A site for assamese poems
+
+This website is for learning and development purpose and has no license. The first project in git...........
