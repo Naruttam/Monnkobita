@@ -1,0 +1,24 @@
+function map($value, $fromLow, $fromHigh, $toLow, $toHigh) {
+    $fromRange = $fromHigh - $fromLow;
+    $toRange = $toHigh - $toLow;
+    $scaleFactor = $toRange / $fromRange;
+
+    // Re-zero the value within the from range
+    $tmpValue = $value - $fromLow;
+    // Rescale the value to the to range
+    $tmpValue *= $scaleFactor;
+    // Re-zero back to the to range
+    return (float)$tmpValue + $toLow;
+}
+
+$rr = map(5, 0, 20, 0, 1);
+
+echo $rr*100;
+
+
+function mapp($value, $low1, $high1, $low2, $high2) {
+    return ($value / ($high1 - $low1)) * ($high2 - $low2) + $low2;
+}
+
+$bb = mapp(5, 0, 20, 0, 1);
+echo "<br>".$bb*100;
